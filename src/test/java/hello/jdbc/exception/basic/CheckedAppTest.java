@@ -1,8 +1,6 @@
 package hello.jdbc.exception.basic;
-
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-
+import org.assertj.core.api.Assertions;
 import java.net.ConnectException;
 import java.sql.SQLException;
 
@@ -13,6 +11,7 @@ public class CheckedAppTest {
         Controller controller = new Controller();
         Assertions.assertThatThrownBy(() -> controller.request())
                 .isInstanceOf(Exception.class);
+
     }
 
     static class Controller {
